@@ -37,7 +37,8 @@ function Person() {
     };
 
     return (
-        <div>
+        <div className='container'>
+            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
             <img src={person.image} alt={person.name} />
             <h3>{person.name}</h3>
             <ul>
@@ -45,7 +46,6 @@ function Person() {
                 <li>Birth year: {person.birthYear}</li>
                 <li>Eye color: {person.eyeColor}</li>
             </ul>
-            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
         </div>
     );
 }

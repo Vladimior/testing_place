@@ -39,7 +39,8 @@ function Planet() {
         planetId > 58 ? setButtonOff(true) : setButtonOff(false);
     };
     return (
-        <div>
+        <div className='container'>
+            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
             <img src={planetImage} alt={planet.name} onError={imageError} />
             <h3>{planet.name}</h3>
             <ul>
@@ -47,7 +48,6 @@ function Planet() {
                 <li>Gravity: {planet.gravity}</li>
                 <li>Terrain: {planet.terrain}</li>
             </ul>
-            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
         </div>
     );
 }

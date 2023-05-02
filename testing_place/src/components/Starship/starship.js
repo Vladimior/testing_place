@@ -39,7 +39,8 @@ function Starship() {
         starshipId > 73 ? setButtonOff(true) : setButtonOff(false);
     };
     return (
-        <div>
+        <div className='container'>
+            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
             <img src={starshipImage} alt={starship.name} onError={imageError} />
             <h3>{starship.name}</h3>
             <ul>
@@ -47,7 +48,6 @@ function Starship() {
                 <li>Length: {starship.length}</li>
                 <li>Passengers: {starship.passengers}</li>
             </ul>
-            <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
         </div>
     );
 }
