@@ -43,9 +43,9 @@ function Starship() {
             <img src={starshipImage} alt={starship.name} onError={imageError} />
             <h3>{starship.name}</h3>
             <ul>
-                <li>climate: {starship.model}</li>
-                <li>gravity: {starship.length}</li>
-                <li>terrain: {starship.passengers}</li>
+                <li>Model: {starship.model}</li>
+                <li>Length: {starship.length}</li>
+                <li>Passengers: {starship.passengers}</li>
             </ul>
             <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
         </div>

@@ -43,9 +43,9 @@ function Planet() {
             <img src={planetImage} alt={planet.name} onError={imageError} />
             <h3>{planet.name}</h3>
             <ul>
-                <li>climate: {planet.climate}</li>
-                <li>gravity: {planet.gravity}</li>
-                <li>terrain: {planet.terrain}</li>
+                <li>Climate: {planet.climate}</li>
+                <li>Gravity: {planet.gravity}</li>
+                <li>Terrain: {planet.terrain}</li>
             </ul>
             <button onClick={handleNextClick} disabled={isLoading || buttonOff }> {isLoading ? "Loading..." : "NEXT"}</button>
         </div>
